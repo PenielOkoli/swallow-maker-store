@@ -39,7 +39,7 @@ export default function CheckoutForm() {
   // Success Message UI
   if (isSuccess) {
     return (
-      <div className="max-w-xl mx-auto p-8 bg-green-50 rounded-xl border border-green-200 text-center shadow-sm">
+      <div className="w-full max-w-xl mx-auto p-6 bg-green-50 rounded-xl border border-green-200 text-center shadow-sm">
         <svg className="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
         </svg>
@@ -50,7 +50,7 @@ export default function CheckoutForm() {
   }
 
   return (
-    <div className="max-w-xl mx-auto p-4 md:p-8 bg-white text-left">
+    <div className="w-full max-w-xl mx-auto p-0 md:p-8 bg-transparent md:bg-white text-left">
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Contact Info */}
         <div>
@@ -160,7 +160,7 @@ export default function CheckoutForm() {
         <div className="pt-4">
           <h3 className="font-bold text-xl text-center mb-6">Select your quantity</h3>
           <div className="space-y-4">
-            <label className="flex items-center justify-between p-3 md:p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-[#6B46C1] transition-colors">
+            <label className="flex items-center justify-between p-3 md:p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-[#6B46C1] transition-colors bg-white">
               <div className="flex items-center gap-3">
                 <input type="radio" name="Quantity" value="1 Unit (₦85,000)" required className="w-4 h-4 text-[#6B46C1]" defaultChecked />
                 <span className="font-medium text-sm md:text-base text-gray-700 uppercase">Buy 1 Unit OF Automatic Swallow Maker</span>
