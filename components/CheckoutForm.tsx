@@ -50,7 +50,7 @@ export default function CheckoutForm() {
   }
 
   return (
-    <div className="max-w-xl mx-auto p-8 bg-white text-left">
+    <div className="max-w-xl mx-auto p-4 md:p-8 bg-white text-left">
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Contact Info */}
         <div>
@@ -160,7 +160,7 @@ export default function CheckoutForm() {
         <div className="pt-4">
           <h3 className="font-bold text-xl text-center mb-6">Select your quantity</h3>
           <div className="space-y-4">
-            <label className="flex items-center justify-between p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-[#6B46C1] transition-colors">
+            <label className="flex items-center justify-between p-3 md:p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-[#6B46C1] transition-colors">
               <div className="flex items-center gap-3">
                 <input type="radio" name="Quantity" value="1 Unit (₦85,000)" required className="w-4 h-4 text-[#6B46C1]" defaultChecked />
                 <span className="font-medium text-sm md:text-base text-gray-700 uppercase">Buy 1 Unit OF Automatic Swallow Maker</span>
@@ -168,7 +168,7 @@ export default function CheckoutForm() {
               <span className="font-bold text-[#6B46C1]">₦85,000</span>
             </label>
 
-            <label className="flex items-center justify-between p-4 border border-[#B794F4] rounded-lg cursor-pointer hover:border-[#6B46C1] transition-colors relative bg-purple-50/30">
+            <label className="flex items-center justify-between p-3 md:p-4 border border-[#B794F4] rounded-lg cursor-pointer hover:border-[#6B46C1] transition-colors relative bg-purple-50/30">
               <div className="flex items-center gap-3">
                 <input type="radio" name="Quantity" value="2 Units (₦165,000)" required className="w-4 h-4 text-[#6B46C1]" />
                 <span className="font-medium text-sm md:text-base text-gray-700 uppercase">Buy 2 Units OF Automatic Swallow Maker</span>
