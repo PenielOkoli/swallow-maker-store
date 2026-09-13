@@ -8,11 +8,11 @@ export default function ThankYouPage() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center pt-12 px-4 pb-20 font-sans">
       
-      {/* FACEBOOK PIXEL ON HOLD 
+      
       <Script id="fb-purchase" strategy="afterInteractive">
         {`fbq('track', 'Purchase', {currency: 'NGN', value: 85000});`}
       </Script>
-      */}
+      
 
       {/* Order Status Badge */}
       <div className="flex items-center gap-4 mb-8 w-full max-w-lg">

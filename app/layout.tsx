@@ -19,7 +19,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        {/* FACEBOOK PIXEL ON HOLD
         <Script id="fb-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
@@ -30,13 +29,23 @@ export default function RootLayout({
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', 'YOUR_PIXEL_ID');
+            fbq('init', '27969101282788744');
             fbq('track', 'PageView');
           `}
         </Script>
-        */}
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=27969101282788744&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
+      </body>
     </html>
   );
 }
