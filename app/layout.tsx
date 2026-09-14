@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "TC Store - Mini DC UPS",
   description: "Keep your router and modem online through every power cut.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
