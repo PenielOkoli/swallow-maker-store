@@ -32,10 +32,6 @@ export default function Home() {
           </div>
           <div className="w-full md:w-1/2">
             <img src="/Untitled-design-21.png" alt="3-in-1 Portable Vacuum Cleaner" className="w-full rounded-xl border border-gray-200 bg-white shadow-xl" />
-            <div className="mt-3 flex gap-3">
-              <img src="/Untitled-design-21.png" alt="Vacuum cleaner front view" className="h-16 w-16 rounded-lg border-2 border-orange-600 bg-white p-1 object-cover md:h-20 md:w-20" />
-              <img src="/vacuum-accessories.webp" alt="Vacuum cleaner accessories" className="h-16 w-16 rounded-lg border-2 border-transparent bg-white p-1 object-cover md:h-20 md:w-20" />
-            </div>
           </div>
         </div></section>
 
