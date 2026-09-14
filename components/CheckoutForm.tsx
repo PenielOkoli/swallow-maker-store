@@ -152,19 +152,19 @@ export default function CheckoutForm() {
           <div className="space-y-4">
             <label className="flex items-center justify-between p-3 md:p-4 border border-gray-200 rounded-lg cursor-pointer bg-white hover:border-orange-600 transition-colors">
               <div className="flex items-center gap-3">
-                <input type="radio" name="Quantity" value="1 Unit (₦15,000)" required className="w-4 h-4 text-orange-600" defaultChecked />
+                <input type="radio" name="Quantity" value="1 Unit (₦50,000)" required className="w-4 h-4 text-orange-600" defaultChecked />
                 <span className="font-medium text-sm md:text-base text-gray-700 uppercase">Buy 1 Unit of Mini DC UPS</span>
               </div>
-              <span className="font-bold text-orange-600">₦15,000</span>
+              <span className="font-bold text-orange-600">₦50,000</span>
             </label>
 
             <label className="flex items-center justify-between p-3 md:p-4 border border-orange-300 rounded-lg cursor-pointer relative bg-orange-50/30 hover:border-orange-600 transition-colors">
               <div className="flex items-center gap-3">
-                <input type="radio" name="Quantity" value="2 Units (₦28,000)" required className="w-4 h-4 text-orange-600" />
+                <input type="radio" name="Quantity" value="2 Units (₦95,000)" required className="w-4 h-4 text-orange-600" />
                 <span className="font-medium text-sm md:text-base text-gray-700 uppercase">Buy 2 Units of Mini DC UPS</span>
               </div>
               <div className="flex items-center gap-2">
-                 <span className="font-bold text-orange-600">₦28,000</span>
+                 <span className="font-bold text-orange-600">₦95,000</span>
               </div>
             </label>
           </div>

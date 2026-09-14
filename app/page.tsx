@@ -27,7 +27,7 @@ export default function Home() {
             <p className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-orange-600">Stay connected through every outage</p>
             <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">When NEPA Takes the Light, Your Wi-Fi Does Not Have to Go With It.</h1>
             <p className="mb-4 text-lg leading-relaxed text-gray-700">The Mini DC UPS keeps your router and modem running through every power cut. No frozen calls, no dead Wi-Fi, and no waiting for light to come back.</p>
-            <div className="mb-8 flex items-baseline gap-3"><span className="text-3xl font-extrabold text-orange-600">₦15,000</span><span className="text-lg text-gray-400 line-through">₦20,000</span></div>
+            <div className="mb-8 flex items-baseline gap-3"><span className="text-3xl font-extrabold text-orange-600">₦50,000</span><span className="text-lg text-gray-400 line-through">₦55,000</span></div>
             <a href="#form-section" className="inline-block rounded-lg bg-orange-600 px-10 py-4 font-bold text-white shadow-md hover:bg-orange-700">Shop Now</a>
           </div>
           <div className="w-full md:w-1/2"><img src="/mini-ups-ports.jpg" alt="Mini DC UPS for routers and modems" className="w-full rounded-xl border border-gray-200 bg-white shadow-xl" /></div>
