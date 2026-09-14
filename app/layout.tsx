@@ -6,8 +6,8 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TC Store - Mini DC UPS",
-  description: "Keep your router and modem online through every power cut.",
+  title: "TC Store - 3-in-1 Portable Vacuum Cleaner",
+  description: "The 3-in-1 Portable Vacuum Cleaner cleans your car, home, and everything in between.",
   icons: {
     icon: "/favicon.ico",
   },
