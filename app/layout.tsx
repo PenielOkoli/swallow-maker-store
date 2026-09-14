@@ -6,8 +6,8 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TC Store - Automatic Swallow Maker",
-  description: "Make perfect swallow with one button.",
+  title: "TC Store - Mini DC UPS",
+  description: "Keep your router and modem online through every power cut.",
 };
 
 export default function RootLayout({

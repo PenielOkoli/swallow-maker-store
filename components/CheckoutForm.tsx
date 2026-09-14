@@ -52,9 +52,9 @@ export default function CheckoutForm() {
             <h2 className="text-2xl font-extrabold text-center mb-4">Confirm Your Order</h2>
             <div className="space-y-4 text-sm md:text-base text-gray-700 text-center">
               <p>We spend a lot of money packaging orders and delivering products across Nigeria.</p>
-              <p>To help us serve our customers better, we kindly ask that you only submit this order if you are ready to receive and pay for your Swallow Maker upon delivery.</p>
+              <p>To help us serve our customers better, we kindly ask that you only submit this order if you are ready to receive and pay for your Mini DC UPS upon delivery.</p>
               <p className="text-red-600 font-semibold">If you are not ready to complete your purchase at this time, please click No and cancel your order.</p>
-              <p className="text-green-600 font-semibold">If you are ready to receive and pay for your Swallow Maker upon delivery, click Yes to continue.</p>
+              <p className="text-green-600 font-semibold">If you are ready to receive and pay for your Mini DC UPS upon delivery, click Yes to continue.</p>
             </div>
             <div className="flex gap-4 mt-8">
               <button 
@@ -152,19 +152,19 @@ export default function CheckoutForm() {
           <div className="space-y-4">
             <label className="flex items-center justify-between p-3 md:p-4 border border-gray-200 rounded-lg cursor-pointer bg-white hover:border-orange-600 transition-colors">
               <div className="flex items-center gap-3">
-                <input type="radio" name="Quantity" value="1 Unit (₦85,000)" required className="w-4 h-4 text-orange-600" defaultChecked />
-                <span className="font-medium text-sm md:text-base text-gray-700 uppercase">Buy 1 Unit OF Automatic Swallow Maker</span>
+                <input type="radio" name="Quantity" value="1 Unit (₦15,000)" required className="w-4 h-4 text-orange-600" defaultChecked />
+                <span className="font-medium text-sm md:text-base text-gray-700 uppercase">Buy 1 Unit of Mini DC UPS</span>
               </div>
-              <span className="font-bold text-orange-600">₦85,000</span>
+              <span className="font-bold text-orange-600">₦15,000</span>
             </label>
 
             <label className="flex items-center justify-between p-3 md:p-4 border border-orange-300 rounded-lg cursor-pointer relative bg-orange-50/30 hover:border-orange-600 transition-colors">
               <div className="flex items-center gap-3">
-                <input type="radio" name="Quantity" value="2 Units (₦165,000)" required className="w-4 h-4 text-orange-600" />
-                <span className="font-medium text-sm md:text-base text-gray-700 uppercase">Buy 2 Units OF Automatic Swallow Maker</span>
+                <input type="radio" name="Quantity" value="2 Units (₦28,000)" required className="w-4 h-4 text-orange-600" />
+                <span className="font-medium text-sm md:text-base text-gray-700 uppercase">Buy 2 Units of Mini DC UPS</span>
               </div>
               <div className="flex items-center gap-2">
-                 <span className="font-bold text-orange-600">₦165,000</span>
+                 <span className="font-bold text-orange-600">₦28,000</span>
               </div>
             </label>
           </div>

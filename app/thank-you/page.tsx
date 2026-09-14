@@ -3,14 +3,14 @@ import Script from 'next/script';
 
 export default function ThankYouPage() {
   const whatsappNumber = "2348107945423"; 
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hi%2C%20I%20just%20placed%20an%20order%20for%20the%20Syinix%20Swallow%20Maker%20on%20your%20website.%20I%20would%20like%20to%20confirm%20my%20delivery%20details.`;
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hi%2C%20I%20just%20placed%20an%20order%20for%20the%20Mini%20DC%20UPS%20on%20your%20website.%20I%20would%20like%20to%20confirm%20my%20delivery%20details.`;
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center pt-12 px-4 pb-20 font-sans">
       
       
       <Script id="fb-purchase" strategy="afterInteractive">
-        {`fbq('track', 'Purchase', {currency: 'NGN', value: 85000});`}
+        {`fbq('track', 'Purchase', {currency: 'NGN', value: 15000, content_name: 'Mini DC UPS'});`}
       </Script>
       
 
@@ -29,10 +29,10 @@ export default function ThankYouPage() {
       <div className="w-full max-w-lg space-y-8">
         <div>
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight leading-tight">
-            Your Swallow Maker is on its way.
+            Your Mini DC UPS is on its way.
           </h1>
           <p className="text-lg text-gray-600">
-            Thank you for your order. We'll be in touch within 24 hours — no upfront payment needed.
+            Thank you for your order. We&apos;ll be in touch within 24 hours - no upfront payment needed.
           </p>
         </div>
 
