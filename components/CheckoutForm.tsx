@@ -3,6 +3,19 @@
 import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
+const orderOptions = {
+  '1 Carton of 12pcs Glass Container (₦135,000)': { value: 135000, quantity: 1 },
+  '2 Cartons of 12pcs Glass Container (₦261,000)': { value: 261000, quantity: 2 },
+  '3 Cartons of 12pcs Glass Container (₦394,000)': { value: 394000, quantity: 3 },
+  '4 Cartons of 12pcs Glass Container (₦522,000)': { value: 522000, quantity: 4 },
+} as const;
+
 export default function CheckoutForm() {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
@@ -21,6 +34,17 @@ export default function CheckoutForm() {
     setIsSubmitting(true);
     
     const formData = new FormData(formRef.current);
+    const selectedOrder = orderOptions[formData.get('Quantity') as keyof typeof orderOptions];
+
+    if (selectedOrder) {
+      window.fbq?.('track', 'InitiateCheckout', {
+        currency: 'NGN',
+        value: selectedOrder.value,
+        num_items: selectedOrder.quantity,
+        content_name: '12-Piece Glass Container Set',
+        content_type: 'product',
+      });
+    }
 
     try {
       const response = await fetch('https://formspree.io/f/xgaebwaj', {
@@ -30,7 +54,11 @@ export default function CheckoutForm() {
       });
 
       if (response.ok) {
-        router.push('/thank-you');
+        const params = new URLSearchParams({
+          value: String(selectedOrder?.value ?? 135000),
+          quantity: String(selectedOrder?.quantity ?? 1),
+        });
+        router.push(`/thank-you?${params.toString()}`);
       } else {
         alert('There was a problem submitting your order. Please try again.');
         setIsSubmitting(false);
