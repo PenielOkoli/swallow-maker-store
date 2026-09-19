@@ -6,8 +6,8 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TC Store - Cordless Pressure Washer",
-  description: "Clean cars, patios, generators, and outdoor spaces with a cordless pressure washer.",
+  title: "TC Store - 12-Piece Glass Storage Set",
+  description: "Keep your food fresh, organized, and safe with a 12-piece borosilicate glass storage set.",
   icons: {
     icon: "/favicon.ico",
   },
