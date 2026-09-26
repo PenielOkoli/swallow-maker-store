@@ -35,28 +35,26 @@ export default function CheckoutForm() {
     
     const formData = new FormData(formRef.current);
     const selectedOrder = orderOptions[formData.get('Quantity') as keyof typeof orderOptions];
-
-    if (selectedOrder) {
-      window.fbq?.('track', 'InitiateCheckout', {
-        currency: 'NGN',
-        value: selectedOrder.value,
-        num_items: selectedOrder.quantity,
-        content_name: '12-Piece Glass Container Set',
-        content_type: 'product',
-      });
-    }
+    const eventId = crypto.randomUUID();
 
     try {
-      const response = await fetch('https://formspree.io/f/xgaebwaj', {
+      const response = await fetch('/api/order', {
         method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
+        body: JSON.stringify({
+          formData: Object.fromEntries(formData.entries()),
+          value: selectedOrder?.value,
+          quantity: selectedOrder?.quantity,
+          phone: formData.get('Phone Number'),
+          eventId,
+        }),
+        headers: { 'Content-Type': 'application/json' },
       });
 
       if (response.ok) {
         const params = new URLSearchParams({
           value: String(selectedOrder?.value ?? 135000),
           quantity: String(selectedOrder?.quantity ?? 1),
+          eventId,
         });
         router.push(`/thank-you?${params.toString()}`);
       } else {

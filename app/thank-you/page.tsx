@@ -24,6 +24,7 @@ function ThankYouContent() {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hi%2C%20I%20just%20placed%20an%20order%20for%20the%2012-piece%20glass%20container%20set%20on%20your%20website.%20I%20would%20like%20to%20confirm%20my%20delivery%20details.`;
   const orderValue = Number(searchParams.get('value')) || 135000;
   const orderQuantity = Number(searchParams.get('quantity')) || 1;
+  const eventId = searchParams.get('eventId');
 
   useEffect(() => {
     const purchaseKey = `meta-purchase-${searchParams.toString()}`;
@@ -36,9 +37,9 @@ function ThankYouContent() {
       num_items: orderQuantity,
       content_name: '12-Piece Glass Container Set',
       content_type: 'product',
-    });
+    }, eventId ? { eventID: eventId } : undefined);
     sessionStorage.setItem(purchaseKey, '1');
-  }, [orderQuantity, orderValue, searchParams]);
+  }, [eventId, orderQuantity, orderValue, searchParams]);
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center pt-12 px-4 pb-20 font-sans">
