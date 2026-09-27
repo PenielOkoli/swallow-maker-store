@@ -37,6 +37,16 @@ export default function CheckoutForm() {
     const selectedOrder = orderOptions[formData.get('Quantity') as keyof typeof orderOptions];
     const eventId = crypto.randomUUID();
 
+    if (selectedOrder) {
+      window.fbq?.('track', 'InitiateCheckout', {
+        currency: 'NGN',
+        value: selectedOrder.value,
+        num_items: selectedOrder.quantity,
+        content_name: '12-Piece Glass Container Set',
+        content_type: 'product',
+      });
+    }
+
     try {
       const response = await fetch('/api/order', {
         method: 'POST',
