@@ -21,7 +21,8 @@ export default function ThankYouPage() {
 function ThankYouContent() {
   const searchParams = useSearchParams();
   const whatsappNumber = "2348107945423"; 
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hi%2C%20I%20just%20placed%20an%20order%20for%20the%2012-piece%20glass%20container%20set%20on%20your%20website.%20I%20would%20like%20to%20confirm%20my%20delivery%20details.`;
+  const productName = searchParams.get('product') || 'glass food storage set';
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi, I just placed an order for the ${productName} on your website. I would like to confirm my delivery details.`)}`;
   const orderValue = Number(searchParams.get('value')) || 135000;
   const orderQuantity = Number(searchParams.get('quantity')) || 1;
   const eventId = searchParams.get('eventId');
@@ -35,11 +36,11 @@ function ThankYouContent() {
       currency: 'NGN',
       value: orderValue,
       num_items: orderQuantity,
-      content_name: '12-Piece Glass Container Set',
+      content_name: productName,
       content_type: 'product',
     }, eventId ? { eventID: eventId } : undefined);
     sessionStorage.setItem(purchaseKey, '1');
-  }, [eventId, orderQuantity, orderValue, searchParams]);
+  }, [eventId, orderQuantity, orderValue, productName, searchParams]);
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center pt-12 px-4 pb-20 font-sans">
@@ -59,7 +60,7 @@ function ThankYouContent() {
       <div className="w-full max-w-lg space-y-8">
         <div>
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight leading-tight">
-            Your glass container set is on its way.
+            Your storage set is on its way.
           </h1>
           <p className="text-lg text-gray-600">
             Thank you for your order. We&apos;ll be in touch within 24 hours - no upfront payment needed.

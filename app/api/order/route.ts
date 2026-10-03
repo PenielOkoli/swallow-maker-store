@@ -18,6 +18,7 @@ export async function POST(request: Request) {
     const orderQuantity = Number(body.quantity);
     const eventId = String(body.eventId || crypto.randomUUID());
     const phone = String(body.phone || '').replace(/\D/g, '');
+    const productName = String(body.productName || 'Glass Food Storage Set');
 
     const formData = new URLSearchParams();
     for (const [key, value] of Object.entries(body.formData || {})) {
@@ -67,7 +68,7 @@ export async function POST(request: Request) {
               currency: 'NGN',
               value: orderValue,
               num_items: orderQuantity,
-              content_name: '12-Piece Glass Container Set',
+              content_name: productName,
               content_type: 'product',
             },
           }],
